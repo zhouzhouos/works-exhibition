@@ -1,7 +1,7 @@
 
 const target_date = new Date(2025, 0, 29, 0, 0, 0, 0)
 
-const card_date = new Date(2023, 0, 28, 20, 0, 0, 0)
+const card_date = new Date(2025, 0, 28, 20, 0, 0, 0)
 // let card_date = new Date()
 // card_date.setSeconds(card_date.getSeconds() + 3)
 

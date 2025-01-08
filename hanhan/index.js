@@ -1,7 +1,7 @@
 
 const target_date = new Date(2025, 0, 29, 0, 0, 0, 0)
 
-const card_date = new Date(2025, 0, 8, 22, 35, 0, 0)
+const card_date = new Date(2025, 0, 28, 20, 0, 0, 0)
 // let card_date = new Date()
 // card_date.setSeconds(card_date.getSeconds() + 3)
 
@@ -9,9 +9,9 @@ setInterval(() => {
     let curr_date = new Date()
     let card_div = document.getElementById('goto-card')
 
-    console.log(curr_date,card_date)
+    // console.log(curr_date, card_date)
 
-    if (curr_date > card_date){
+    if (curr_date > card_date) {
         card_div.style.visibility = "visible"; // 显示元素
     }
 
@@ -22,7 +22,7 @@ setInterval(() => {
     // }
 
     // 时间已到，跳转新页面
-    if (curr_date > target_date){
+    if (curr_date > target_date) {
         window.open('./greeting_card/index.html', '_self')
     }
 
@@ -30,6 +30,13 @@ setInterval(() => {
 
 }, 1000)
 
+let is_fullscreen = false
+
+function toggleFullscreen() {
+    is_fullscreen = !is_fullscreen
+    is_fullscreen ? document.documentElement.requestFullscreen() : document.exitFullscreen()
+    console.log('is_fullscreen', is_fullscreen)
+}
 
 // Happy New Year!!!
 //

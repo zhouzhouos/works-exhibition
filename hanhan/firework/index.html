@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
 	<meta charset="UTF-8">
-	<title>Firework Simulator v2</title>
+	<title>春节快乐 | 烟花</title>
 	<link rel="icon" href="../firework.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta name="mobile-web-app-capable" content="yes">
@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<body ondblclick="toggleFullscreen()">
 	<!-- partial:index.partial.html -->
 	<!-- SVG Spritesheet -->
 	<div style="height: 0; width: 0; position: absolute; visibility: hidden;">
@@ -57,8 +57,8 @@
 	<!-- App -->
 	<div class="container">
 		<div class="loading-init">
-			<div class="loading-init__header">Loading</div>
-			<div class="loading-init__status">Assembling Shells</div>
+			<div class="loading-init__header">加载中...</div>
+			<div class="loading-init__status">正在组装</div>
 		</div>
 		<div class="stage-container remove">
 			<div class="canvas-container">
@@ -89,52 +89,52 @@
 							<use href="#icon-close" xlink:href="#icon-close"></use>
 						</svg>
 					</div>
-					<div class="menu__header">Settings</div>
-					<div class="menu__subheader">For more info, click any label.</div>
+					<div class="menu__header">调整参数</div>
+					<div class="menu__subheader">点击表单标签 显示作用详情说明</div>
 					<form>
 						<div class="form-option form-option--select">
-							<label class="shell-type-label">Shell Type</label>
+							<label class="shell-type-label">烟花类型</label>
 							<select class="shell-type"></select>
 						</div>
 						<div class="form-option form-option--select">
-							<label class="shell-size-label">Shell Size</label>
+							<label class="shell-size-label">烟花规格</label>
 							<select class="shell-size"></select>
 						</div>
 						<div class="form-option form-option--select">
-							<label class="quality-ui-label">Quality</label>
+							<label class="quality-ui-label">动画质量</label>
 							<select class="quality-ui"></select>
 						</div>
 						<div class="form-option form-option--select">
-							<label class="sky-lighting-label">Sky Lighting</label>
+							<label class="sky-lighting-label">照亮天空</label>
 							<select class="sky-lighting"></select>
 						</div>
 						<div class="form-option form-option--select">
-							<label class="scaleFactor-label">Scale</label>
+							<label class="scaleFactor-label">动画缩放</label>
 							<select class="scaleFactor"></select>
 						</div>
 						<div class="form-option form-option--checkbox">
-							<label class="auto-launch-label">Auto Fire</label>
+							<label class="auto-launch-label">自动发射</label>
 							<input class="auto-launch" type="checkbox" />
 						</div>
 						<div class="form-option form-option--checkbox form-option--finale-mode">
-							<label class="finale-mode-label">Finale Mode</label>
+							<label class="finale-mode-label">多彩多艳</label>
 							<input class="finale-mode" type="checkbox" />
 						</div>
 						<div class="form-option form-option--checkbox">
-							<label class="hide-controls-label">Hide Controls</label>
+							<label class="hide-controls-label">隐藏控件</label>
 							<input class="hide-controls" type="checkbox" />
 						</div>
 						<div class="form-option form-option--checkbox form-option--fullscreen">
-							<label class="fullscreen-label">Fullscreen</label>
+							<label class="fullscreen-label">全屏视觉</label>
 							<input class="fullscreen" type="checkbox" />
 						</div>
 						<div class="form-option form-option--checkbox">
-							<label class="long-exposure-label">Open Shutter</label>
+							<label class="long-exposure-label">轨迹留滞</label>
 							<input class="long-exposure" type="checkbox" />
 						</div>
 					</form>
 					<div class="credits">
-						Passionately built by <a href="https://cmiller.tech/" target="_blank">Caleb Miller</a>.
+						Made by ZhouZhou & cite from Caleb Miller.
 					</div>
 				</div>
 			</div>
@@ -144,7 +144,7 @@
 			<div class="help-modal__dialog">
 				<div class="help-modal__header"></div>
 				<div class="help-modal__body"></div>
-				<button type="button" class="help-modal__close-btn">Close</button>
+				<button type="button" class="help-modal__close-btn">OK</button>
 			</div>
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 
 const target_date = new Date(2025, 0, 29, 0, 0, 0, 0)
 
-const card_date = new Date(2023, 0, 8, 22, 20, 0, 0)
+const card_date = new Date(2025, 0, 8, 22, 20, 0, 0)
 // let card_date = new Date()
 // card_date.setSeconds(card_date.getSeconds() + 3)
 
@@ -9,7 +9,7 @@ setInterval(() => {
     let curr_date = new Date()
     let card_div = document.getElementById('goto-card')
 
-
+    console.log(curr_date,card_date)
 
     if (curr_date > card_date){
         card_div.style.visibility = "visible"; // 显示元素

@@ -1,0 +1,14 @@
+.fireworks {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: url("./e9951400.png") right top no-repeat;
+    background-size: auto 150px;
+    background-color: gray;
+    animation: fireworks 1s steps(24) infinite;
+}
+@keyframes fireworks {
+    to {
+        background-position: 100%;
+    }
+}

@@ -1,17 +1,28 @@
 
-const target_date = new Date(2025, 0, 28, 20, 0, 0, 0)
-// let target_date = new Date()
-// target_date.setSeconds(target_date.getSeconds() + 3)
+const target_date = new Date(2025, 0, 29, 0, 0, 0, 0)
+
+const card_date = new Date(2025, 0, 28, 20, 0, 0, 0)
+// let card_date = new Date()
+// card_date.setSeconds(card_date.getSeconds() + 3)
 
 setInterval(() => {
     let curr_date = new Date()
+    let card_div = document.getElementById('goto-card')
 
-    // 时间未到，显示倒计时
-    if (curr_date < target_date) {
-        ;
+
+
+    if (curr_date > card_date){
+        card_div.style.visibility = "visible"; // 显示元素
     }
+
+    // if (curr_date > card_date){
+    //     card_div.style.display = '' // 显示元素
+    // }else{
+    //     card_div.style.display = 'none' // 隐藏元素
+    // }
+
     // 时间已到，跳转新页面
-    else {
+    if (curr_date > target_date){
         window.open('./greeting_card/index.html', '_self')
     }
 

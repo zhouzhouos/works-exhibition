@@ -11,11 +11,9 @@ body {
   padding: 0;
   margin: 0;
   background: rgb(119, 13, 13);
-  background: radial-gradient(
-    circle,
-    rgba(119, 13, 13, 0.92) 64%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  background: radial-gradient(circle,
+      rgba(119, 13, 13, 0.92) 64%,
+      rgba(0, 0, 0, 0.6) 100%);
 }
 
 canvas {
@@ -39,6 +37,7 @@ canvas {
   0% {
     background-position: 0% 30%;
   }
+
   100% {
     background-position: 1000% 500%;
   }
@@ -73,11 +72,46 @@ canvas {
   .label {
     font-size: 1.7rem;
   }
+
   .time span {
     padding: 0 16px;
     font-size: 0.6rem;
   }
+
   .time span div {
     font-size: 2rem;
+  }
+}
+
+#goto-card {
+  padding-top: 10%;
+  height: 10px;
+}
+
+#goto-card a {
+  padding: 8px 20px;
+  border: 2px solid #da9c41;
+  border-radius: 10px;
+}
+
+.breathe-text {
+  display: inline-block;
+  font-size: 1em;
+  animation-name: breathe;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* 定义关键帧 */
+@keyframes breathe {
+
+  0%,
+  100% {
+    font-size: 1em;
+  }
+
+  50% {
+    font-size: 1.2em;
   }
 }

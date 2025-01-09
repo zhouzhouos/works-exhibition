@@ -10,6 +10,9 @@ const card_date = new Date(2025, 1 + MOffset, 28, 20, 0, 0, 0)
 if (new URLSearchParams(window.location.search).get('for') === 'card'){
     target_date = card_date
 }
+if (new URLSearchParams(window.location.search).get('dev') === 'true'){
+    document.title = document.title + ' v0.1'
+}
 
 setInterval(() => {
     let curr_date = new Date()

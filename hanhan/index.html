@@ -3,7 +3,11 @@
 
 <head>
     <link rel="icon" href="./firework.png">
-    <title>春节快乐，涵涵。 | 倒计时</title>
+
+    <script>
+        document.title = new URLSearchParams(window.location.search).get('for') === 'card' ? '春节快乐，涵涵。 | 倒计时' : '春节倒计时'
+    </script>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./index.css">
 

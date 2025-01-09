@@ -1,7 +1,9 @@
 
-const target_date = new Date(2025, 0, 29, 0, 0, 0, 0)
+const MOffset = -1
 
-const card_date = new Date(2025, 0, 28, 20, 0, 0, 0)
+const target_date = new Date(2025, 1 + MOffset, 29, 0, 0, 0, 0)
+
+const card_date = new Date(2024, 1 + MOffset, 28, 20, 0, 0, 0)
 // let card_date = new Date()
 // card_date.setSeconds(card_date.getSeconds() + 3)
 
@@ -12,7 +14,9 @@ setInterval(() => {
     // console.log(curr_date, card_date)
 
     if (curr_date > card_date) {
-        card_div.style.visibility = "visible"; // 显示元素
+        if (new URLSearchParams(window.location.search).get('for') === 'card') {
+            card_div.style.visibility = "visible"; // 显示元素
+        }
     }
 
     // if (curr_date > card_date){
@@ -22,9 +26,9 @@ setInterval(() => {
     // }
 
     // 时间已到，跳转新页面
-    if (curr_date > target_date) {
-        window.open('./greeting_card/index.html', '_self')
-    }
+    // if (curr_date > target_date) {
+    //     window.open('./greeting_card/index.html', '_self')
+    // }
 
     console.log(curr_date < target_date)
 
@@ -143,7 +147,14 @@ const m = document.getElementById("m");
 const s = document.getElementById("s");
 
 function getTrueNumber(num) {
-    return num < 10 ? "0" + num : num;
+    let ret = num < 10 ? "0" + num : num;
+
+    if (num < 0) {
+        let a_num = Math.abs(num) - 1
+        ret = a_num == 0 ? "00" : "+" + a_num
+    }
+
+    return ret
 }
 
 function calculateRemainingTime() {

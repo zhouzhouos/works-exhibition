@@ -18,8 +18,15 @@
 
     <div class="middle">
         <div onclick="toggleFullscreen()">
-            <h1 class="label">新 年 倒 计 时
+            <h1 class="label" id="countdown-title">新 年 倒 计 时
             </h1>
+            <script>
+
+                document.getElementById('countdown-title').textContent =
+                    new URLSearchParams(window.location.search).get('for') === 'card' ?
+                        '贺 卡 倒 计 时' : '新 年 倒 计 时'
+
+            </script>
             <div class="time">
                 <span>
                     <div id="d">00</div>

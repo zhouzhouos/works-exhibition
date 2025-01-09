@@ -1,11 +1,15 @@
 
 const MOffset = -1
 
-const target_date = new Date(2025, 1 + MOffset, 29, 0, 0, 0, 0)
+let target_date = new Date(2025, 1 + MOffset, 29, 0, 0, 0, 0)
 
 const card_date = new Date(2025, 1 + MOffset, 28, 20, 0, 0, 0)
 // let card_date = new Date()
 // card_date.setSeconds(card_date.getSeconds() + 3)
+
+if (new URLSearchParams(window.location.search).get('for') === 'card'){
+    target_date = card_date
+}
 
 setInterval(() => {
     let curr_date = new Date()

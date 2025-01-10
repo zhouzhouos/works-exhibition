@@ -13,11 +13,7 @@ body {
 	background: #79130f;
 	font-family: "Quicksand", sans-serif;
 
-	canvas.snow {
-		position: absolute;
-		z-index: -1;
-		/* border: 2px solid green; */
-	}
+
 
 	.container {
 		position: absolute;

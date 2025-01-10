@@ -1,5 +1,12 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"); */
 
+:root {
+	--card-width: 70vw;
+	--card-height: 70vh;
+	/* --egde-width: 6.7%;
+	--egde-height: 7.1% */
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -12,17 +19,6 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-}
-
-.card {
-	position: relative;
-	margin: 20px 0;
-	width: 70vw; /* 1290 * 2796 */
-	height: 70vh;
-	background: #f2dcbb;
-	transform-style: preserve-3d;
-	transform: perspective(2000px);
-	transition: 0.75s;
 }
 
 .card:hover {
@@ -53,12 +49,92 @@ body {
 	object-fit: cover;
 }
 
-.card .content {
-	position: absolute;
-	top: 0;
-	left: 0;
-	box-sizing: border-box;
-	padding: 25px;
+.card {
+	/* margin: 5px; */
+	position: relative;
+	margin: 20px 0;
+	width: var(--card-width);
+	/* 1290 * 2796 */
+	height: var(--card-height);
+	background: #cf4437;
+	transform-style: preserve-3d;
+	transform: perspective(2000px);
+	transition: 0.75s;
+
+
+	/* --edge-width: 6.7%;
+	--edge-height: 7.1%; */
+	--edge-width: 66px;
+	--edge-height: 99px;
+
+	--circle-diameter: 70px;
+	.content {
+
+
+		z-index: 0;
+		background-color: #f5ecb5;
+		position: absolute;
+		width: calc(100% - var(--edge-width) * 2);
+		left: var(--edge-width);
+		height: calc(100% - var(--edge-height) * 2);
+		top: var(--edge-height);
+		box-sizing: border-box;
+		padding: 25px;
+		padding-top: 20%;
+
+
+
+	}
+
+
+	.circle {
+
+
+		z-index: 1;
+		position: absolute;
+		width: var(--circle-diameter);
+		height: var(--circle-diameter);
+		background: #f5ecb5;
+		-webkit-border-radius: 50px;
+		border-radius: 50px;
+		/* border: 0.1px solid black; */
+
+		.square {
+			transform: rotate(45deg);
+			transform-origin: center;
+			position: absolute;
+			--square-width: 50%;
+			top: calc(50% - var(--square-width)/ 2);
+			left: calc(50% - var(--square-width)/ 2);
+			width: var(--square-width);
+			height: var(--square-width);
+			background: #cf4437;
+			/* border: 1px solid green; */
+
+		}
+
+	}
+
+	#circle0 {
+		left: calc(var(--edge-width) - var(--circle-diameter)/2);
+		top: calc(var(--edge-height) - var(--circle-diameter)/2);
+	}
+
+	#circle1 {
+		left: calc(var(--edge-width) - var(--circle-diameter)/2);
+		bottom: calc(var(--edge-height) - var(--circle-diameter)/2);
+	}
+
+	#circle2 {
+		right: calc(var(--edge-width) - var(--circle-diameter)/2);
+		top: calc(var(--edge-height) - var(--circle-diameter)/2);
+	}
+
+	#circle3 {
+		right: calc(var(--edge-width) - var(--circle-diameter)/2);
+		bottom: calc(var(--edge-height) - var(--circle-diameter)/2);
+	}
+
 }
 
 .card .content h2 {

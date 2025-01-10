@@ -17,8 +17,8 @@ body {
 .card {
 	position: relative;
 	margin: 20px 0;
-	width: 1290px * 0.66; /* 1290 * 2796 */
-	height: 2796px * 0.66;
+	width: 851px * 0.66; /* 1290 * 2796 */
+	height: 1845px * 0.66;
 	background: #f2dcbb;
 	transform-style: preserve-3d;
 	transform: perspective(2000px);

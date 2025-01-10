@@ -18,11 +18,11 @@ body {
 	.container {
 		position: absolute;
 		left: calc((100vw - var(--card-width))/2);
-		/* top: calc((100vh - var(--card-height))/2); */
-		display: flex;
+		top: calc((100vh - var(--card-height))/2);
+		/* display: flex; */
 		align-items: center;
 		justify-content: center;
-		min-height: 100vh;
+		/* min-height: 100vh; */
 		/* border: 2px solid blue; */
 	}
 }

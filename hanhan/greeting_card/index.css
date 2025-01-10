@@ -186,7 +186,7 @@ body {
 @media screen and (orientation: landscape) {
 	:root {
 
-		--card-width: 25vw;
+		--card-width: 22vw;
 		--card-height: 66vh;
 	}
 
@@ -225,7 +225,7 @@ body {
 
 		/* --edge-width: 6.7%;
 	--edge-height: 7.1%; */
-		--edge-width: 39px;
+		--edge-width: 32px;
 		--edge-height: 66px;
 
 		--circle-diameter: 35px;

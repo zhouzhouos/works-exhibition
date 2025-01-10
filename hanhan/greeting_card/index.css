@@ -4,6 +4,10 @@
 	--card-width: 70vw;
 	--card-height: 70vh;
 } */
+:root {
+	--card-fg: #de9b38;
+	--card-bg: #fcf3c7;
+}
 
 body {
 	margin: 0;
@@ -93,7 +97,7 @@ body {
 
 
 			z-index: 0;
-			background-color: #f5ebb4;
+			background-color: var(--card-bg);
 			position: absolute;
 			width: calc(100% - var(--edge-width) * 2);
 			left: var(--edge-width);
@@ -104,7 +108,7 @@ body {
 			padding-left: 10%;
 			padding-right: 10%;
 			padding-top: 20%;
-			color: var(--bg-color);
+			color: var(--card-fg);
 
 			.text-center {
 				text-align: center;
@@ -120,12 +124,12 @@ body {
 			}
 
 			.sub-title {
-				font-size: 1em;
+				font-size: 1.4em;
 			}
 
 			.main-text-body {
 
-				font-size: 1.25em;
+				font-size: 1.8em;
 			}
 
 		}
@@ -138,7 +142,7 @@ body {
 			position: absolute;
 			width: var(--circle-diameter);
 			height: var(--circle-diameter);
-			background: #f5ecb5;
+			background: var(--card-bg);
 			-webkit-border-radius: 50px;
 			border-radius: 50px;
 			/* border: 0.1px solid black; */
@@ -234,7 +238,7 @@ body {
 
 
 			z-index: 0;
-			background-color: #f5ebb4;
+			background-color: var(--card-bg);
 			position: absolute;
 			width: calc(100% - var(--edge-width) * 2);
 			left: var(--edge-width);
@@ -245,7 +249,7 @@ body {
 			padding-left: 10%;
 			padding-right: 10%;
 			padding-top: 20%;
-			color: var(--bg-color);
+			color: var(--card-fg);
 
 			.text-center {
 				text-align: center;
@@ -286,7 +290,7 @@ body {
 			position: absolute;
 			width: var(--circle-diameter);
 			height: var(--circle-diameter);
-			background: #f5ecb5;
+			background: var(--card-bg);
 			-webkit-border-radius: 50px;
 			border-radius: 50px;
 			/* border: 0.1px solid black; */

@@ -29,8 +29,51 @@ body {
 	}
 }
 
-.card:hover {
-	transform: perspective(2000px) rotate(-5deg);
+
+.card {
+
+	animation: swing 3s .15s linear infinite;
+	/* animation: none; */
+
+	&:hover {
+		animation: rotate 2s;
+		animation-fill-mode: forwards;
+		/* transform: perspective(2000px) rotate(-5deg); */
+	}
+
+
+
+
+}
+
+@keyframes rotate {
+
+	100% {
+		transform: perspective(2000px) rotate(-5deg);
+	}
+}
+
+@keyframes swing {
+	10% {
+		transform: rotate(2deg);
+	}
+
+	20% {
+		transform: rotate(-2deg);
+	}
+
+	30% {
+		transform: rotate(2deg);
+	}
+
+	40% {
+		transform: rotate(-2deg);
+	}
+
+	50%,
+	100% {
+		transform: rotate(0deg);
+	}
 }
 
 .card .imgBox {
@@ -131,6 +174,21 @@ body {
 
 				font-size: 1.8em;
 			}
+			.fan {
+				position: absolute;
+				bottom: 0%;
+				width: 80%;
+				left: 10%;
+				/* border: 2px solid rgb(112, 191, 38); */
+				text-align: center;
+				align-items: center;
+				img {
+					width: 40%;
+					/* border: 2px solid black; */
+				}
+			}
+
+
 
 		}
 
@@ -151,7 +209,7 @@ body {
 				transform: rotate(45deg);
 				transform-origin: center;
 				position: absolute;
-				--square-width: 50%;
+				--square-width: 40%;
 				top: calc(50% - var(--square-width)/ 2);
 				left: calc(50% - var(--square-width)/ 2);
 				width: var(--square-width);
@@ -275,6 +333,20 @@ body {
 				font-size: 12px;
 			}
 
+			.fan {
+				position: absolute;
+				bottom: 0%;
+				width: 80%;
+				left: 10%;
+				/* border: 2px solid rgb(112, 191, 38); */
+				text-align: center;
+				align-items: center;
+				img {
+					width: 40%;
+					/* border: 2px solid black; */
+				}
+			}
+
 			/* p {
 				margin-top: 10px;
 				line-height: 1.35em;
@@ -299,7 +371,7 @@ body {
 				transform: rotate(45deg);
 				transform-origin: center;
 				position: absolute;
-				--square-width: 50%;
+				--square-width: 40%;
 				top: calc(50% - var(--square-width)/ 2);
 				left: calc(50% - var(--square-width)/ 2);
 				width: var(--square-width);

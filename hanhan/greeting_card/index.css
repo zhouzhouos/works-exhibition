@@ -138,7 +138,6 @@ body {
 
 		.content {
 
-
 			z-index: 0;
 			background-color: var(--card-bg);
 			position: absolute;
@@ -148,32 +147,52 @@ body {
 			top: var(--edge-height);
 			box-sizing: border-box;
 			/* padding: 25px; */
-			padding-left: 10%;
-			padding-right: 10%;
-			padding-top: 20%;
+			/* padding-left: 10%;
+			padding-right: 10%; */
+			/* padding-top: 20%; */
 			color: var(--card-fg);
 
-			.text-center {
-				text-align: center;
+			.firework-area {
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				/* border: 1px solid rgb(56, 105, 11); */
 			}
 
-			.text-right {
-				text-align: right;
+
+			.text-container {
+
+				padding: 0 10%;
+				/* margin: auto; */
+
+				/* align-items: center; */
+
+				.text-center {
+					text-align: center;
+				}
+
+				.text-right {
+					text-align: right;
+				}
+
+				.title {
+					font-size: 2.3em;
+					font-weight: bold;
+				}
+
+				.sub-title {
+					font-size: 1.4em;
+				}
+
+				.main-text-body {
+
+					font-size: 1.8em;
+				}
 			}
 
-			.title {
-				font-size: 2.3em;
-				font-weight: bold;
-			}
 
-			.sub-title {
-				font-size: 1.4em;
-			}
 
-			.main-text-body {
-
-				font-size: 1.8em;
-			}
 			.fan {
 				position: absolute;
 				bottom: 0%;
@@ -182,6 +201,7 @@ body {
 				/* border: 2px solid rgb(112, 191, 38); */
 				text-align: center;
 				align-items: center;
+
 				img {
 					width: 40%;
 					/* border: 2px solid black; */
@@ -294,7 +314,6 @@ body {
 
 		.content {
 
-
 			z-index: 0;
 			background-color: var(--card-bg);
 			position: absolute;
@@ -304,34 +323,50 @@ body {
 			top: var(--edge-height);
 			box-sizing: border-box;
 			/* padding: 25px; */
-			padding-left: 10%;
-			padding-right: 10%;
-			padding-top: 20%;
+			/* padding-left: 10%;
+			padding-right: 10%; */
+			/* padding-top: var(--area-height) + 5%; */
 			color: var(--card-fg);
 
-			.text-center {
-				text-align: center;
+			.firework-area {
+				/* z-index: 10; */
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				/* height: var(--area-height); */
+				/* border: 1px solid rgb(56, 105, 11); */
 			}
 
-			.text-right {
-				text-align: right;
+			.text-container {
+				padding: 0 10%;
+
+				.text-center {
+					text-align: center;
+				}
+
+				.text-right {
+					text-align: right;
+				}
+
+				.title {
+					font-size: 15px;
+					font-weight: bold;
+				}
+
+				.sub-title {
+					font-size: 10px;
+					/* font-weight: bold; */
+
+				}
+
+				.main-text-body {
+
+					font-size: 12px;
+				}
 			}
 
-			.title {
-				font-size: 15px;
-				font-weight: bold;
-			}
 
-			.sub-title {
-				font-size: 10px;
-				/* font-weight: bold; */
-
-			}
-
-			.main-text-body {
-
-				font-size: 12px;
-			}
 
 			.fan {
 				position: absolute;
@@ -341,6 +376,7 @@ body {
 				/* border: 2px solid rgb(112, 191, 38); */
 				text-align: center;
 				align-items: center;
+
 				img {
 					width: 40%;
 					/* border: 2px solid black; */

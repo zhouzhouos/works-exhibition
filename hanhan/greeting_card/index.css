@@ -151,6 +151,8 @@ body {
 			padding-right: 10%; */
 			/* padding-top: 20%; */
 			color: var(--card-fg);
+			display: flex;
+			flex-direction: column;
 
 			.firework-area {
 				position: relative;
@@ -164,7 +166,8 @@ body {
 			.text-container {
 
 				padding: 0 10%;
-				/* margin: auto; */
+				margin: auto;
+				/* height: 100%; */
 
 				/* align-items: center; */
 
@@ -194,10 +197,10 @@ body {
 
 
 			.fan {
-				position: absolute;
+				/* position: absolute;
 				bottom: 0%;
 				width: 80%;
-				left: 10%;
+				left: 10%; */
 				/* border: 2px solid rgb(112, 191, 38); */
 				text-align: center;
 				align-items: center;
@@ -327,6 +330,8 @@ body {
 			padding-right: 10%; */
 			/* padding-top: var(--area-height) + 5%; */
 			color: var(--card-fg);
+			display: flex;
+			flex-direction: column;
 
 			.firework-area {
 				/* z-index: 10; */
@@ -340,6 +345,9 @@ body {
 
 			.text-container {
 				padding: 0 10%;
+				margin: auto;
+				
+				/* border: 1px solid black; */
 
 				.text-center {
 					text-align: center;
@@ -369,10 +377,10 @@ body {
 
 
 			.fan {
-				position: absolute;
+				/* position: absolute;
 				bottom: 0%;
-				width: 80%;
-				left: 10%;
+				left: 10%; */
+				/* width: 80%; */
 				/* border: 2px solid rgb(112, 191, 38); */
 				text-align: center;
 				align-items: center;

@@ -7,6 +7,7 @@
 :root {
 	--card-fg: #de9b38;
 	--card-bg: #fcf3c7;
+	--card-bg-deeper: #f5e38d;
 }
 
 body {
@@ -227,18 +228,32 @@ body {
 			-webkit-border-radius: 50px;
 			border-radius: 50px;
 			/* border: 0.1px solid black; */
+			transform: rotate(45deg);
+			transform-origin: center;
+
+			.circle-inner {
+
+				position: absolute;
+				--square-width: 70%;
+				top: calc(50% - var(--square-width)/ 2);
+				left: calc(50% - var(--square-width)/ 2);
+				width: var(--square-width);
+				height: var(--square-width);
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				background: var(--card-bg-deeper);
+			}
 
 			.square {
-				transform: rotate(45deg);
-				transform-origin: center;
 				position: absolute;
-				--square-width: 40%;
+				--square-width: 35%;
 				top: calc(50% - var(--square-width)/ 2);
 				left: calc(50% - var(--square-width)/ 2);
 				width: var(--square-width);
 				height: var(--square-width);
 				background: var(--bg-color);
 				/* border: 1px solid green; */
+				border-radius: 25%;
 
 			}
 
@@ -346,7 +361,7 @@ body {
 			.text-container {
 				padding: 0 10%;
 				margin: auto;
-				
+
 				/* border: 1px solid black; */
 
 				.text-center {
@@ -411,18 +426,33 @@ body {
 			border-radius: 50px;
 			/* border: 0.1px solid black; */
 
-			.square {
-				transform: rotate(45deg);
-				transform-origin: center;
+			transform: rotate(45deg);
+			transform-origin: center;
+
+			.circle-inner {
+
 				position: absolute;
-				--square-width: 40%;
+				--square-width: 70%;
+				top: calc(50% - var(--square-width)/ 2);
+				left: calc(50% - var(--square-width)/ 2);
+				width: var(--square-width);
+				height: var(--square-width);
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				background: var(--card-bg-deeper);
+			}
+
+
+			.square {
+				position: absolute;
+				--square-width: 35%;
 				top: calc(50% - var(--square-width)/ 2);
 				left: calc(50% - var(--square-width)/ 2);
 				width: var(--square-width);
 				height: var(--square-width);
 				background: var(--bg-color);
 				/* border: 1px solid green; */
-
+				border-radius: 25%;
 			}
 
 		}
@@ -453,12 +483,12 @@ body {
 
 html,
 body {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  background: rgb(119, 13, 13);
-  background: radial-gradient(circle,
-      rgba(119, 13, 13, 0.92) 64%,
-      rgba(0, 0, 0, 0.6) 100%);
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background: rgb(119, 13, 13);
+	background: radial-gradient(circle,
+			rgba(119, 13, 13, 0.92) 64%,
+			rgba(0, 0, 0, 0.6) 100%);
 }

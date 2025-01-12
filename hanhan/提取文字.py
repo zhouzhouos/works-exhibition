@@ -1,8 +1,8 @@
 from PIL import Image
 import numpy as np
 
-
-im = Image.open('./temp/text.jpg')
+f = './temp/text1.jpg'
+im = Image.open(f)
 arr_rbg = np.array(im)
 arr_rbga = np.zeros([arr_rbg.shape[0], arr_rbg.shape[1], 4], dtype=np.uint8)
 print(arr_rbg.shape, arr_rbga.shape)
@@ -19,4 +19,6 @@ for i in range(arr_rbg.shape[0]):
 
 im = Image.fromarray(arr_rbga)
 # im.show()
-im.save('./temp/text-content.png')
+target = f.rsplit('.',1)[0]+'.png'
+print(target)
+im.save(target)

@@ -85,3 +85,27 @@ class Snow {
 }
 
 new Snow();
+
+
+
+let mtb = document.querySelector('.main-text-body')
+let imgs = mtb.getElementsByTagName('img')
+let current_img_idx = 0
+
+function turn_show() {
+    for (let i = 0; i < imgs.length; i++) {
+        if (i === current_img_idx) {
+            imgs[i].style.display = ''
+        }
+        else {
+            imgs[i].style.display = 'none'
+        }
+    }
+}
+turn_show()
+mtb.addEventListener('click', (event) => {
+    // console.log(mtb.getElementsByTagName('img'))
+    current_img_idx += 1
+    current_img_idx %= imgs.length
+    turn_show()
+})

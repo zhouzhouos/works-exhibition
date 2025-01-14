@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+
+    <script>
+
+        function set() {
+            window.localStorage.setItem('item', document.getElementById('in').value)
+        }
+
+
+        function show() {
+            let item = window.localStorage.getItem('item')
+            console.log(item)
+            document.getElementById('a').textContent += item
+        }
+
+
+    </script>
+    <button onclick="set()">make </button><input id="in" type="text">
+    <br />
+    <button onclick="show()">show</button><span id="a">TEXT: </span>
+
+</body>
+
+</html>

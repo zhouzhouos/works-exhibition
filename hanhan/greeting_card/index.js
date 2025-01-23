@@ -101,6 +101,16 @@ function turn_show() {
             imgs[i].style.display = 'none'
         }
     }
+
+    let fan = document.getElementById('img-fan')
+    let boom = document.getElementById('img-boom')
+    if (current_img_idx === imgs.length - 1) {
+        fan.style.display = 'none'
+        boom.style.display = ''
+    } else {
+        boom.style.display = 'none'
+        fan.style.display = ''
+    }
 }
 turn_show()
 mtb.addEventListener('click', (event) => {
